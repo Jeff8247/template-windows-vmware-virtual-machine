@@ -122,6 +122,10 @@ windows_run_once = [
 | `vsphere_password` | `string` | required | vCenter password (sensitive) |
 | `vsphere_allow_unverified_ssl` | `bool` | `false` | Skip TLS certificate verification |
 
+**`vsphere_server`** — hostname or IP address only, no protocol or port (e.g. `vcenter.example.com`, not `https://vcenter.example.com`).
+
+**`vsphere_user`** — the vSphere provider requires UPN format: `user@domain` (e.g. `administrator@vsphere.local`). The `DOMAIN\user` format is not supported.
+
 ### Infrastructure Placement
 
 | Variable | Type | Default | Description |
@@ -132,6 +136,10 @@ windows_run_once = [
 | `resource_pool` | `string` | `null` | Resource pool name; `null` uses the cluster/host root pool |
 | `datastore` | `string` | `null` | Datastore name (mutually exclusive with `datastore_cluster`) |
 | `datastore_cluster` | `string` | `null` | Datastore cluster name (mutually exclusive with `datastore`) |
+
+All inventory names (`datacenter`, `cluster`, `host`, `datastore`, `datastore_cluster`, `resource_pool`) must match **exactly** as they appear in the vCenter inventory — they are case-sensitive. Find them in the vSphere Client under the Hosts & Clusters and Storage views.
+
+Set exactly one of `cluster` or `host`, and exactly one of `datastore` or `datastore_cluster`. The template enforces this with `check` blocks that fail at plan time if both are set.
 
 ### VM Identity
 
