@@ -383,6 +383,12 @@ variable "hardware_version" {
   default     = null
 }
 
+variable "nested_hv_enabled" {
+  description = "Enable nested hardware virtualization"
+  type        = bool
+  default     = false
+}
+
 variable "enable_disk_uuid" {
   description = "Expose disk UUIDs to the guest OS"
   type        = bool

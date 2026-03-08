@@ -85,6 +85,7 @@ module "vm" {
   # Hardware
   firmware                    = var.firmware
   hardware_version            = var.hardware_version
+  nested_hv_enabled           = var.nested_hv_enabled
   enable_disk_uuid            = var.enable_disk_uuid
   vbs_enabled                 = var.vbs_enabled
   wait_for_guest_net_timeout  = var.wait_for_guest_net_timeout
