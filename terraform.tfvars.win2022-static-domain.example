@@ -102,7 +102,8 @@ windows_run_once         = []     # e.g. ["powershell.exe -File C:\\setup.ps1"]
 
 # Hardware
 firmware         = "efi"
-hardware_version = null           # null = keep template version
+hardware_version     = null           # null = keep template version
+tools_upgrade_policy = "manual"       # manual or upgradeAtPowerCycle
 nested_hv_enabled = false
 enable_disk_uuid = true
 vbs_enabled      = false
