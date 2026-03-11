@@ -280,6 +280,7 @@ Full list: [Microsoft Windows Time Zone Index Values](https://learn.microsoft.co
 | `tools_upgrade_policy` | `string` | `"manual"` | VMware Tools upgrade policy: `manual` or `upgradeAtPowerCycle` |
 | `enable_disk_uuid` | `bool` | `true` | Expose disk UUIDs to the guest OS |
 | `vbs_enabled` | `bool` | `false` | Enable Virtualization-Based Security (requires EFI) |
+| `efi_secure_boot_enabled` | `bool` | `false` | Enable EFI Secure Boot (requires firmware = efi; recommended with vbs_enabled) |
 | `wait_for_guest_net_timeout` | `number` | `5` | Minutes to wait for guest networking (`0` disables) |
 | `wait_for_guest_net_routable` | `bool` | `true` | Require a routable IP before marking VM ready |
 | `customize_timeout` | `number` | `60` | Minutes to wait for Sysprep to complete |

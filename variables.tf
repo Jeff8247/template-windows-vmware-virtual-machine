@@ -427,6 +427,12 @@ variable "vbs_enabled" {
   default     = false
 }
 
+variable "efi_secure_boot_enabled" {
+  description = "Enable EFI Secure Boot. Requires firmware = 'efi'. Recommended when vbs_enabled = true."
+  type        = bool
+  default     = false
+}
+
 variable "wait_for_guest_net_timeout" {
   description = "Minutes to wait for guest networking before timing out (0 to disable)"
   type        = number

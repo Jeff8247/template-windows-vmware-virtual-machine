@@ -19,7 +19,7 @@ check "datastore_exclusive" {
 }
 
 module "vm" {
-  source = "github.com/Jeff8247/module-vmware-virtual-machine?ref=v1.0.5"
+  source = "github.com/Jeff8247/module-vmware-virtual-machine?ref=v1.0.6"
 
   # Infrastructure placement
   datacenter        = var.datacenter
@@ -89,7 +89,8 @@ module "vm" {
   tools_upgrade_policy        = var.tools_upgrade_policy
   nested_hv_enabled           = var.nested_hv_enabled
   enable_disk_uuid            = var.enable_disk_uuid
-  vbs_enabled                 = var.vbs_enabled
+  vbs_enabled             = var.vbs_enabled
+  efi_secure_boot_enabled = var.efi_secure_boot_enabled
   wait_for_guest_net_timeout  = var.wait_for_guest_net_timeout
   wait_for_guest_net_routable = var.wait_for_guest_net_routable
   customize_timeout           = var.customize_timeout
