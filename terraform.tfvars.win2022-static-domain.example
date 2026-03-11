@@ -53,6 +53,7 @@ time_zone     = 85                  # 85 = Eastern Standard Time
 # Active Directory domain join
 windows_domain      = "corp.example.com"
 windows_domain_user = "svc-domain-join"
+windows_domain_ou   = "OU=Servers,OU=IT,DC=corp,DC=example,DC=com"   # null = default Computers container
 
 # Hardware
 firmware             = "efi"

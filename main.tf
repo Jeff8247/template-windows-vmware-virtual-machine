@@ -19,7 +19,7 @@ check "datastore_exclusive" {
 }
 
 module "vm" {
-  source = "github.com/Jeff8247/module-vmware-virtual-machine?ref=v1.0.4"
+  source = "github.com/Jeff8247/module-vmware-virtual-machine?ref=v1.0.5"
 
   # Infrastructure placement
   datacenter        = var.datacenter
@@ -74,9 +74,10 @@ module "vm" {
   domain                   = var.domain
   time_zone                = var.time_zone
   windows_admin_password   = var.windows_admin_password
-  windows_domain           = var.windows_domain
-  windows_domain_user      = var.windows_domain_user
-  windows_domain_password  = var.windows_domain_password
+  windows_domain          = var.windows_domain
+  windows_domain_user     = var.windows_domain_user
+  windows_domain_password = var.windows_domain_password
+  windows_domain_ou       = var.windows_domain_ou
   windows_workgroup        = var.windows_workgroup
   windows_auto_logon       = var.windows_auto_logon
   windows_auto_logon_count = var.windows_auto_logon_count

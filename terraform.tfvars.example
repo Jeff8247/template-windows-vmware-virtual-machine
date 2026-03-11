@@ -44,8 +44,9 @@ computer_name = "WIN-SERVER-01"   # max 15 characters
 time_zone     = 85                # 85 = Eastern Standard Time
 
 # Active Directory domain join — remove block to stay in workgroup
-# windows_domain          = "corp.example.com"
-# windows_domain_user     = "svc-domain-join"
+# windows_domain      = "corp.example.com"
+# windows_domain_user = "svc-domain-join"
+# windows_domain_ou   = "OU=Servers,OU=IT,DC=corp,DC=example,DC=com"   # null = default Computers container
 # windows_domain_password via TF_VAR_windows_domain_password
 
 # Hardware

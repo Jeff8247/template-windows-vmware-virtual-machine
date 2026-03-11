@@ -242,6 +242,7 @@ One entry per NIC, in the same order as `network_interfaces`.
 | `windows_domain` | `string` | `null` | AD domain to join — `null` skips domain join |
 | `windows_domain_user` | `string` | `null` | AD user with join permissions |
 | `windows_domain_password` | `string` | `null` | Domain join password (sensitive) |
+| `windows_domain_ou` | `string` | `null` | OU distinguished name for the computer object (e.g. `OU=Servers,OU=IT,DC=corp,DC=example,DC=com`). Null uses the default Computers container |
 | `windows_workgroup` | `string` | `"WORKGROUP"` | Workgroup name when not joining a domain |
 | `windows_auto_logon` | `bool` | `false` | Auto-logon Administrator after Sysprep |
 | `windows_auto_logon_count` | `number` | `1` | Number of auto-logon sessions |
