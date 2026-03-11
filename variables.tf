@@ -393,6 +393,16 @@ variable "hardware_version" {
   default     = null
 }
 
+variable "tools_upgrade_policy" {
+  description = "VMware Tools upgrade policy. 'upgradeAtPowerCycle' automatically upgrades on power-on; 'manual' disables automatic upgrades."
+  type        = string
+  default     = "manual"
+  validation {
+    condition     = contains(["manual", "upgradeAtPowerCycle"], var.tools_upgrade_policy)
+    error_message = "tools_upgrade_policy must be one of: manual, upgradeAtPowerCycle."
+  }
+}
+
 variable "nested_hv_enabled" {
   description = "Enable nested hardware virtualization"
   type        = bool

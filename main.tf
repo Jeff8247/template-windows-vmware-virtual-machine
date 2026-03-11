@@ -19,7 +19,7 @@ check "datastore_exclusive" {
 }
 
 module "vm" {
-  source = "github.com/Jeff8247/module-vmware-virtual-machine?ref=v1.0.2"
+  source = "github.com/Jeff8247/module-vmware-virtual-machine?ref=v1.0.3"
 
   # Infrastructure placement
   datacenter        = var.datacenter
@@ -85,6 +85,7 @@ module "vm" {
   # Hardware
   firmware                    = var.firmware
   hardware_version            = var.hardware_version
+  tools_upgrade_policy        = var.tools_upgrade_policy
   nested_hv_enabled           = var.nested_hv_enabled
   enable_disk_uuid            = var.enable_disk_uuid
   vbs_enabled                 = var.vbs_enabled
