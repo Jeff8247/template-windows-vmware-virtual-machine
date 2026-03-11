@@ -13,6 +13,14 @@ datastore  = "datastore01"
 vm_name   = "win-server-01"
 vm_folder = "VMs/Windows"
 
+# Tags — category name must already exist in vCenter
+tags = {
+  "Environment" = "Production"
+  "Owner"       = "platform-team"
+  "CostCentre"  = "CC-1234"
+  "Application" = "my-app"
+}
+
 # Template
 template_name = "WIN2022-TEMPLATE"
 
